@@ -6,7 +6,7 @@
   } @else {
     @error 'Не используйте единицы измерения при работе с функцией rem()! Передавайте аргументом только числа.'
   }
-};
+}
 
 @function fluid($max: 100, $min: 10) {
     $maxViewportWidth: 1920;
@@ -21,8 +21,8 @@
     $yAxisIntersection: -$minWidth * $slope + $minSize;
   
     @return clamp(
-      #{$minSize * 1rem},
-      #{$yAxisIntersection * 1rem} + #{$slope * 100vw},
-      #{$maxSize * 1rem}
-    );
+        #{$minSize * 1rem},
+        #{$yAxisIntersection * 1rem} + #{$slope * 100vw},
+        #{$maxSize * 1rem}
+      );
 }
